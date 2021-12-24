@@ -100,6 +100,13 @@ main{
 .list ol li a:hover{
   color: #008db7;
 }
+.list a{
+  text-decoration: none;
+  color: #192f60;
+}
+.list a:hover{
+  color: #008db7;
+}
 
 h2{
   font-weight: lighter;
