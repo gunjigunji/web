@@ -1,11 +1,19 @@
 @charset "UTF-8";
 
+/* CSS Custom Properties */
+:root{
+  --main-text-color: #404040;
+  --main-list-color: #192f60;
+  --main-list-hover-color: #008db7;
+  --width-for-pc: 960px;
+}
+
 /* ---body--- */
 body{
   margin:0px;
   padding-left: 50px;
   padding-right: 50px;
-  width:960px;
+  width: var(--width-for-pc);
   margin-right:auto;
   margin-left:auto;
   font-family: "Arial",sans-serif;
@@ -18,13 +26,13 @@ header{
   margin-right:auto;
   margin-top:0px;
   margin-bottom:0px;
-  width:960px;
+  width: var(--width-for-pc);
   position: relative;
   height: 200px;
 }
 
 #title{
-  color: #404040;
+  color: var(--main-text-color);
   text-align: center;
   margin-top: 0;
   margin-left: 0;
@@ -57,10 +65,10 @@ h1{
   color: #a9a9a9;
 }
 .nav li.current a {
-  color: #404040;
+  color: var(--main-text-color);
 }
 .nav li a:hover {
-  color: #404040;
+  color: var(--main-text-color);
 }
 
 
@@ -68,10 +76,10 @@ h1{
 main{
   margin-left:auto;
   margin-right:auto;
-  width:960px;
+  width:var(--width-for-pc);
   padding-left: 0px;
   padding-right: 0px;
-  color: #404040;
+  color: var(--main-text-color);
   box-sizing: border-box;
 }
 .b-break{
@@ -95,17 +103,17 @@ main{
 }
 .list ol li a{
   text-decoration: none;
-  color: #192f60;
+  color: var(--main-list-color);
 }
 .list ol li a:hover{
-  color: #008db7;
+  color: var(--main-list-hover-color);
 }
 .list ul li a{
   text-decoration: none;
-  color: #192f60;
+  color: var(--main-list-color);
 }
 .list ul li a:hover{
-  color: #008db7;
+  color: var(--main-list-hover-color);
 }
 
 h2{
@@ -115,22 +123,22 @@ h2{
 
 .pub a{
   text-decoration: none;
-  color: #192f60;
+  color: var(--main-list-color);
 }
 .pub a:hover{
-  color: #008db7;
+  color: var(--main-list-hover-color);
 }
 .link a{
   text-decoration: none;
-  color: #192f60;
+  color: var(--main-list-color);
 }
 .link a:hover{
-  color: #008db7;
+  color: var(--main-list-hover-color);
 }
 
 /* ---footer--- */
 footer{
-  width:960px;
+  width:var(--width-for-pc);
   text-align: center;
   font-size: small;
   color: #a9a9a9;
