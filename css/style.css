@@ -5,30 +5,36 @@
   --main-text-color: #404040;
   --main-list-color: #192f60;
   --main-list-hover-color: #008db7;
+  --main-font-size-for-mobile: x-small;
+  --h2-font-size-for-mobile: small;
   --width-for-pc: 960px;
+  --width-for-mobile: 92%;
+  --height-of-header-for-pc: 200px;
+  --height-of-header-for-mobile: 45px;
+  --nav-color: #a9a9a9;
 }
 
+
+/* Settings for PC */
 /* ---body--- */
 body{
-  margin:0px;
+  margin: 0;
   padding-left: 50px;
   padding-right: 50px;
   width: var(--width-for-pc);
-  margin-right:auto;
-  margin-left:auto;
+  margin-right: auto;
+  margin-left: auto;
   font-family: "Arial",sans-serif;
 }
-
-
 /* ---header--- */
 header{
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:0px;
-  margin-bottom:0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   width: var(--width-for-pc);
   position: relative;
-  height: 200px;
+  height: var(--height-of-header-for-pc);
 }
 
 #title{
@@ -62,7 +68,7 @@ h1{
 }
 .nav a {
   text-decoration: none;
-  color: #a9a9a9;
+  color: var(--nav-color);
 }
 .nav li.current a {
   color: var(--main-text-color);
@@ -91,7 +97,6 @@ main{
 }
 .list ul li{
   margin-bottom: 10px;
-  /* list-style-type: circle; */
   list-style-type: disc;
 }
 .list ol{
@@ -146,3 +151,179 @@ footer{
   border-top: solid 1px #bababa;
 }
 
+
+
+/* Settings for Mobile */
+@media screen and (max-width:480px){
+/* ---body--- */
+body{
+  margin: 0px;
+  left: 0;
+  right: 0;
+  width: var(--width-for-mobile);
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Arial",sans-serif;
+}
+
+/* ---header--- */
+header{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+	position: fixed;
+  background: white;
+  height: var(--height-of-header-for-mobile);
+  box-shadow: 0px 1px 2px 0px gray;
+}
+
+#title{
+  display: none;
+  /* color: var(--main-text-color); */
+  /* color:  #a9a9a9; */
+  /* text-align: center; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* margin-top: 10px; */
+  /* margin-left: 0; */
+  /* margin-right: 0; */
+  /* padding: 0px 0px 0px 0px; */
+  /* border-bottom: none; */
+}
+h1{
+  font-weight: lighter;
+  font-size: x-small;
+}
+
+/* nav */
+.nav ul {
+  list-style: none;
+  overflow: hidden;
+	position: fixed;
+	top: 0;
+  left: 0;
+  right: 0;
+	background: white;
+	width: 100%;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav li {
+  width: 25%;
+  text-align: center;
+  float: left;
+  height: 20px;
+  line-height: 15px;
+  border-top: none;
+  border-bottom: none;
+}
+.nav a {
+	display: block;
+  text-decoration: none;
+	font-size: xx-small;
+  color: var(--nav-color);
+}
+.nav li.current a {
+  color: var(--main-text-color);
+}
+.nav li a:hover {
+  color: var(--main-text-color);
+}
+
+/* ---main--- */
+main{
+  margin-top: 80px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width:var(--width-for-mobile);
+  padding-left: 0px;
+  padding-right: 0px;
+  color: var(--main-text-color);
+  box-sizing: border-box;
+  font-size: var(--main-font-size-for-mobile);
+}
+.b-break{
+  word-break: break-word;
+  line-height: 1.6;
+}
+.list ul{
+  padding-left: 18px;
+}
+.list ul li{
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+.list ol{
+  padding-left: 18px;
+}
+.list ol li{
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.list ol li a{
+  text-decoration: none;
+  color: var(--main-list-color);
+}
+.list ol li a:hover{
+  color: var(--main-list-hover-color);
+}
+.list ul li a{
+  text-decoration: none;
+  color: var(--main-list-color);
+}
+.list ul li a:hover{
+  color: var(--main-list-hover-color);
+}
+
+h2{
+  font-size: var(--h2-font-size-for-mobile);
+  font-weight: lighter;
+  margin-top: 30px;
+}
+
+.pub a{
+  text-decoration: none;
+  color: var(--main-list-color);
+}
+.pub a:hover{
+  color: var(--main-list-hover-color);
+}
+.link a{
+  text-decoration: none;
+  color: var(--main-list-color);
+}
+.link a:hover{
+  color: var(--main-list-hover-color);
+}
+
+/* ---footer--- */
+footer{
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: xx-small;
+  color: #a9a9a9;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  border-top: none;
+}
+}
